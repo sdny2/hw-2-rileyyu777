@@ -35,3 +35,27 @@ audio/
 __pycache__/
 *.pyc
 .DS_Store
+# build artifacts / packaging
+*.egg-info/
+dist/
+build/
+
+# generated outputs
+*.png
+*.wav
+outputs/
+figs/
+audio/
+
+# extra HDF5 not required by HW
+*.hdf5
+!GW150914_4_template.hdf5
+!H-H1_LOSC_4_V2-1126259446-32.hdf5
+!L-L1_LOSC_4_V2-1126259446-32.hdf5
+
+# misc noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+*.bak
