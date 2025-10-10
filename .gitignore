@@ -1,0 +1,19 @@
+# generated outputs
+figs/
+# usual noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
+# generated outputs
+*.wav
+*.png
+outputs/
+figs/
+audio/
+
+# notebooks + python noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
