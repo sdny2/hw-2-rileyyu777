@@ -11,3 +11,5 @@ dependencies:
   - decorator=5.1
   - ipykernel=6.29
   - pip
+  - pip:
+      - -e .
