@@ -1,0 +1,76 @@
+=== AI usage log ===
+Date: 2025-10-10
+Task: HW2 packaging & Binder setup
+Tool: ChatGPT (GPT-5 Thinking)
+Prompts (summary): 
+ - “Help me make ligotools a proper package.”
+ - “Write environment.yml pinned to Binder versions.”
+ - “Add Binder badge and postBuild.”
+Key outputs:
+- # make package folder
+mkdir -p ligotools
+
+# move the file into the package
+git mv readligo.py ligotools/readligo.py
+
+# add package initializer so Python treats it as a package
+printf "__all__ = ['readligo']\n" > ligotools/__init__.py
+
+ - cat > environment.yml << 'EOF'
+name: ligo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # pin only major.minor unless you truly need patch
+  - python=3.10
+  - numpy=1.24
+  - scipy=1.10
+  - matplotlib=3.7
+  - h5py=3.8
+  - decorator=4.4
+  - ipykernel=6.29
+  - pip
+  # you can add others you see used in the notebook, e.g.:
+  # - ipython=8.12
+  # - jupyterlab=4.2
+  # - pillow=10.2
+> === AI usage log ===
+Date: 2025-10-10
+Task: HW2 packaging & Binder setup
+Tool: ChatGPT (GPT-5 Thinking)
+> Prompts (summary): 
+ - “Help me make ligotools a proper package.”
+ - “Write environment.yml pinned to Binder versions.”
+ - “Add Binder badge and postBuild.”
+> Key outputs:
+- # make package folder
+mkdir -p ligotools
+
+# move the file into the package
+git mv readligo.py ligotools/readligo.py
+
+# add package initializer so Python treats it as a package
+printf "__all__ = ['readligo']\n" > ligotools/__init__.py
+
+ - cat > environment.yml << 'EOF'
+name: ligo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # pin only major.minor unless you truly need patch
+  - python=3.10
+  - numpy=1.24
+  - scipy=1.10
+  - matplotlib=3.7
+  - h5py=3.8
+  - decorator=4.4
+  - ipykernel=6.29
+  - pip
+  # you can add others you see used in the notebook, e.g.:
+  # - ipython=8.12
+  # - jupyterlab=4.2
+  # - pillow=10.2
+ - [![Launch Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/UCB-stat-159-f25/hw-2-rileyyu777/HEAD?labpath=notebooks/LOSC_Event_tutorial.ipynb)
+
