@@ -17,3 +17,21 @@ audio/
 __pycache__/
 *.pyc
 .DS_Store
+# generated outputs
+*.png
+*.wav
+outputs/
+figs/
+audio/
+
+# ignore any extra HDF5 produced by you, but keep the required ones
+*.hdf5
+!GW150914_4_template.hdf5
+!H-H1_LOSC_4_V2-1126259446-32.hdf5
+!L-L1_LOSC_4_V2-1126259446-32.hdf5
+
+# notebook/python noise
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.DS_Store
